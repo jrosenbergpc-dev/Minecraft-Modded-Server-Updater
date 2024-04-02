@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Minecraft_Modded_Server_Updater.models
+namespace Minecraft_Modded_Server_Updater.Models
 {
 	public class Mod
 	{

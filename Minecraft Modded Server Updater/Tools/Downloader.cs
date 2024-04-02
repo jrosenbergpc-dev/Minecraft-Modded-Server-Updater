@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using Minecraft_Modded_Server_Updater.models;
+using Minecraft_Modded_Server_Updater.Models;
 
 namespace Minecraft_Modded_Server_Updater.Tools
 {
