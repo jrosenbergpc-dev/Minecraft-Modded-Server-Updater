@@ -1,0 +1,29 @@
+﻿<Window x:Class="Minecraft_Modded_Server_Updater.ModList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minecraft_Modded_Server_Updater"
+        mc:Ignorable="d"
+        Title="ModList" Height="650" Width="350" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/minecraft_phone_bg.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label Content="Installed Mod List" Foreground="#CCFFFFFF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,10,0,10" FontFamily="Cascadia Mono" FontSize="24" />
+            <Rectangle Fill="#99FFFFFF" MinHeight="1" Margin="15,0,15,0" />
+            <Grid MinHeight="30" />
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="ModListContainer">
+            </StackPanel>
+        </ScrollViewer>
+        <Button Grid.Row="2" Content="Go Back" Background="#7FFFFFFF" Foreground="White" Margin="15,10,15,10" Padding="0,0,0,0" FontSize="16" BorderBrush="White" Click="Button_Click" />
+    </Grid>
+</Window>

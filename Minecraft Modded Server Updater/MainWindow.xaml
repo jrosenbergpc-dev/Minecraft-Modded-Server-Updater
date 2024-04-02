@@ -1,0 +1,38 @@
+﻿<Window x:Class="Minecraft_Modded_Server_Updater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minecraft_Modded_Server_Updater"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="Server Update Tool" Height="550" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Loaded="Window_Loaded">
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/minecraft_phone_bg.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle >
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#66000000" Offset="0.307"/>
+                    <GradientStop Color="Transparent" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image x:Name="StatusImage" gif:ImageBehavior.AnimatedSource="Images/minecraft_loading.gif" />
+        <Image x:Name="StatusImageGood" Source="Images/minecraft_okay.png" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="180" MaxHeight="180" Visibility="Collapsed" />
+        <StackPanel Grid.Row="1">
+            <Label x:Name="StatusLabel" Content="Status" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#59000000" Foreground="White" FontSize="16" FontFamily="Arial" VerticalAlignment="Top" />
+            <ProgressBar x:Name="DownloadProgressBar" Height="5" BorderBrush="{x:Null}" Background="#99E6E6E6" Foreground="#CC06B025" Visibility="Collapsed" />
+            <Label x:Name="ModCountLabel" Content="[Installed Mods: " HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#59000000" Foreground="White" FontSize="16" FontFamily="Arial" VerticalAlignment="Top" />
+            <Button x:Name="Button" Content="View Installed Mod List" Background="#990076D0" BorderBrush="#FF0076D0" Foreground="#CCFFFFFF" Padding="1,6,1,6" Margin="10,10,10,10" Click="Button_Click" />
+        </StackPanel>
+
+        <Button x:Name="StartButton" Grid.Row="2" Content="Start Minecraft Launcher" Background="#66009A23" Margin="20,20,20,20" BorderBrush="#CC009A23" Foreground="#CCFFFFFF" Visibility="Collapsed" Click="StartButton_Click" />
+    </Grid>
+</Window>

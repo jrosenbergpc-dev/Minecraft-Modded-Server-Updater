@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
+    <RootNamespace>Minecraft_Modded_Server_Updater</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>iconfinder_wrench_416405.ico</ApplicationIcon>
+    <Company>Singular Applications Inc.</Company>
+    <Description>A Tool Designed to Assist with Downloading and Installing Mods from a dedicated Minecraft Server.</Description>
+    <Copyright>Copyright © Singular Applications Inc. 2024</Copyright>
+    <PackageProjectUrl>https://www.singularapplications.com</PackageProjectUrl>
+    <FileVersion>1.5.0.0</FileVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\minecraft_loading.gif" />
+    <None Remove="Images\minecraft_newmod_icon.png" />
+    <None Remove="Images\minecraft_okay.png" />
+    <None Remove="Images\minecraft_phone_bg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="iconfinder_wrench_416405.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\minecraft_loading.gif" />
+    <Resource Include="Images\minecraft_newmod_icon.png" />
+    <Resource Include="Images\minecraft_okay.png" />
+    <Resource Include="Images\minecraft_phone_bg.jpg" />
+  </ItemGroup>
+
+</Project>

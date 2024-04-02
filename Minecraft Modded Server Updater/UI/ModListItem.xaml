@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Minecraft_Modded_Server_Updater.UI.ModListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Minecraft_Modded_Server_Updater.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image x:Name="InstalledImage" Source="/Images/minecraft_okay.png" Margin="3,3,3,3" />
+        <Image x:Name="NewModImage" Source="/Images/minecraft_newmod_icon.png" Margin="3,3,3,3" Visibility="Collapsed" />
+        <Label x:Name="ModNameLabel" Grid.Column="1" Content="Mod Name" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Foreground="White" FontSize="14" />
+    </Grid>
+</UserControl>
