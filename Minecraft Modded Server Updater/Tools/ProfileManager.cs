@@ -46,23 +46,29 @@ namespace Minecraft_Modded_Server_Updater.Tools
 						List<Mod> xMods = await API.GetServerModList(_profile.RepositoryAddress);
 						App.LastModList = xMods;
 
-						xMods.ForEach(async mod =>
+						if (_profile.IsActiveProfile == true)
 						{
-							if (mod.IsInstalled == false)
+							API.ProcessModFiles(xMods, _profile.InstallationPath + "\\mods");
+							API.VerifyAllMods(xMods, _profile.InstallationPath + "\\mods");
+
+							xMods.ForEach(async mod =>
 							{
-								await Task.Delay(500);
-
-								if (await Downloader.DownloadModFile(_profile.RepositoryAddress, mod))
+								if (mod.IsInstalled == false)
 								{
-									await Task.Delay(1000);
+									await Task.Delay(500);
 
-									if (Installer.InstallModFile(_profile.InstallationPath, App.RunningDirectory + "tempdl\\" + mod.FileName))
+									if (await Downloader.DownloadModFile(_profile.RepositoryAddress, mod))
 									{
-										Installer.DeleteTempFile(App.RunningDirectory + "tempdl\\" + mod.FileName);
+										await Task.Delay(1000);
+
+										if (Installer.InstallModFile(_profile.InstallationPath, App.RunningDirectory + "tempdl\\" + mod.FileName))
+										{
+											Installer.DeleteTempFile(App.RunningDirectory + "tempdl\\" + mod.FileName);
+										}
 									}
 								}
-							}
-						});
+							});
+						}
 					}
 				}
 			});

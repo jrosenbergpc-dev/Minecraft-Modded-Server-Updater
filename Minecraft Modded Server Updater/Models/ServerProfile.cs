@@ -19,5 +19,6 @@ namespace Minecraft_Modded_Server_Updater.Models
 
         public Uri RepositoryAddress { get; set; }
 
+        public bool IsActiveProfile { get; set; }
     }
 }
