@@ -11,8 +11,9 @@
     <Description>A Tool Designed to Assist with Downloading and Installing Mods from a dedicated Minecraft Server.</Description>
     <Copyright>Copyright © Singular Applications Inc. 2024</Copyright>
     <PackageProjectUrl>https://www.singularapplications.com</PackageProjectUrl>
-    <FileVersion>1.5.0.0</FileVersion>
-    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

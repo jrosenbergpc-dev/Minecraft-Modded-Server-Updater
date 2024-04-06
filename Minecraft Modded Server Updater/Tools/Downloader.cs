@@ -15,7 +15,7 @@ namespace Minecraft_Modded_Server_Updater.Tools
 		public static event EventHandler<int> DownloadProgressChanged;
 		public static event EventHandler<bool> DownloadCompleted;
 
-		public static async Task<bool> DownloadModFile(Mod modfile)
+		public static async Task<bool> DownloadModFile(Uri repo, Mod modfile)
 		{
 			bool isComplete = false;
 
@@ -23,7 +23,7 @@ namespace Minecraft_Modded_Server_Updater.Tools
 			{
 				using (HttpClient client = new HttpClient())
 				{
-					using (HttpResponseMessage response = await client.GetAsync(API.ServerAddress + modfile.FileName))
+					using (HttpResponseMessage response = await client.GetAsync(repo + modfile.FileName))
 					{
 						using (Stream contentStream = await response.Content.ReadAsStreamAsync())
 						{
