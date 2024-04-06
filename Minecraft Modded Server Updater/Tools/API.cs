@@ -6,15 +6,15 @@ using System.Net.Http;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using Minecraft_Modded_Server_Updater.models;
+using Minecraft_Modded_Server_Updater.Models;
 
 namespace Minecraft_Modded_Server_Updater.Tools
 {
 	public static class API
 	{
-		public static string ServerAddress { get; set; } = "http://www.singularapplications.com/minecraft/servers/singularcore/mods/";
+		//public static string ServerAddress { get; set; } = "http://www.singularapplications.com/minecraft/servers/singularcore/mods/";
 
-		public static async Task<List<Mod>> GetServerModList()
+		public static async Task<List<Mod>> GetServerModList(Uri url)
 		{
 			//string = mod filename, bool = is installed or not
 			List<Mod> modlist = new List<Mod>();
@@ -23,7 +23,7 @@ namespace Minecraft_Modded_Server_Updater.Tools
 
 			using (HttpClient client = new HttpClient())
 			{
-				HttpResponseMessage response = await client.GetAsync(ServerAddress);
+				HttpResponseMessage response = await client.GetAsync(url);
 				response.EnsureSuccessStatusCode(); // Throw an exception if HTTP request fails
 
 				string content = await response.Content.ReadAsStringAsync();

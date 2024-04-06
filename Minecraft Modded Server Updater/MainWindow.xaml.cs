@@ -1,4 +1,4 @@
-﻿using Minecraft_Modded_Server_Updater.models;
+﻿using Minecraft_Modded_Server_Updater.Models;
 using Minecraft_Modded_Server_Updater.Tools;
 using System;
 using System.Collections.Generic;
