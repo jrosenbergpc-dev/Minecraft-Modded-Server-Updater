@@ -41,8 +41,20 @@ namespace Minecraft_Modded_Server_Updater.Tools
 				});
 			}
 
+			ProcessModFiles();
+
+			foreach (Mod mod in modlist)
+			{
+				VerifyModInstallation(mod);
+			}
+
+			return modlist;
+		}
+
+		private static void ProcessModFiles(List<Mod> modlist, string dir)
+		{
 			//check all installed mod files and find ones that aren't in the mod list and delete them!
-			IEnumerable<String> xFiles = Directory.EnumerateFiles(App.MinecraftDirectory);
+			IEnumerable<String> xFiles = Directory.EnumerateFiles(dir);
 			foreach (String xFile in xFiles)
 			{
 				string tempFileName = Path.GetFileName(xFile);
@@ -65,13 +77,6 @@ namespace Minecraft_Modded_Server_Updater.Tools
 					}
 				}
 			}
-
-			foreach (Mod mod in modlist)
-			{
-				VerifyModInstallation(mod);
-			}
-
-			return modlist;
 		}
 
 		private static void VerifyModInstallation(Mod modfile)
