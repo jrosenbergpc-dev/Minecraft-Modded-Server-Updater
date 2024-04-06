@@ -17,10 +17,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MainWindow.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Images\minecraft_loading.gif" />
     <None Remove="Images\minecraft_newmod_icon.png" />
     <None Remove="Images\minecraft_okay.png" />
     <None Remove="Images\minecraft_phone_bg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="MainWindow.xaml" />
   </ItemGroup>
 
   <ItemGroup>
