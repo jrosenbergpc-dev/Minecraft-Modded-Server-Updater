@@ -23,8 +23,10 @@ namespace Minecraft_Modded_Server_Updater
 
 		protected override void OnStartup(StartupEventArgs e)
 		{
-			base.OnStartup(e);
 			Installer.CreateDownloadDirectory();
+			Installer.CreateProfileDirectory();
+
+			base.OnStartup(e);
 		}
 
 		protected override void OnLoadCompleted(NavigationEventArgs e)

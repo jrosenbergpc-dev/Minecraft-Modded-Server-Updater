@@ -34,20 +34,13 @@ namespace Minecraft_Modded_Server_Updater.Tools
 			return isDone;
 		}
 
-		/// <summary>
-		/// Create's Mod folder in specified Minecraft Directory.
-		/// </summary>
-		/// <param name="dir">Minecraft Directory (path)</param>
-		public static void CreateModDirectory(string dir)
-		{
-			if (Directory.Exists(dir + "\\mods") == false)
-			{
-				Directory.CreateDirectory(dir + "\\mods");
-			}
-		}
-
 		public static bool DoesDirectoryExist(string dir)
 		{
+			if (Directory.Exists(dir) == false)
+			{
+				Directory.CreateDirectory(dir);
+			}
+
 			return Directory.Exists(dir);
 		}
 
@@ -56,6 +49,14 @@ namespace Minecraft_Modded_Server_Updater.Tools
 			if (Directory.Exists(App.RunningDirectory + "\\tempdl") == false)
 			{
 				Directory.CreateDirectory(App.RunningDirectory + "\\tempdl");
+			}
+		}
+
+		public static void CreateProfileDirectory()
+		{
+			if (Directory.Exists(App.RunningDirectory + "\\profiles") == false)
+			{
+				Directory.CreateDirectory(App.RunningDirectory + "\\profiles");
 			}
 		}
 

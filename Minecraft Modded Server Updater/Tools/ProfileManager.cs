@@ -10,7 +10,7 @@ namespace Minecraft_Modded_Server_Updater.Tools
     public class ProfileManager
     {
         private List<ServerProfile> _profiles;
-		private ProfileWriter _profileWriter = new ProfileWriter();
+		private ProfileWriter _profileWriter;
 
         public ProfileManager() 
         {
@@ -43,11 +43,11 @@ namespace Minecraft_Modded_Server_Updater.Tools
 				{
 					if (Installer.DoesDirectoryExist(_profile.InstallationPath + "\\mods"))
 					{
-						List<Mod> xMods = await API.GetServerModList(_profile.RepositoryAddress);
-						App.LastModList = xMods;
-
 						if (_profile.IsActiveProfile == true)
 						{
+							List<Mod> xMods = await API.GetServerModList(_profile.RepositoryAddress);
+							App.LastModList = xMods;
+
 							API.ProcessModFiles(xMods, _profile.InstallationPath + "\\mods");
 							API.VerifyAllMods(xMods, _profile.InstallationPath + "\\mods");
 
