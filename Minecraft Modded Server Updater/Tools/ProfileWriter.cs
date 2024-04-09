@@ -23,7 +23,7 @@ namespace Minecraft_Modded_Server_Updater.Tools
 			_profile = profile;
 		}
 
-		public void SaveProfile()
+		public void Save()
 		{
 			if ( _profile != null )
 			{

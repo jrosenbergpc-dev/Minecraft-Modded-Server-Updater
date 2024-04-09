@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace Minecraft_Modded_Server_Updater.Tools
 {
@@ -20,9 +22,9 @@ namespace Minecraft_Modded_Server_Updater.Tools
 
         public List<ServerProfile> Profiles { get { return _profiles; } }
 
-        public void CreateNewProfile()
+        public void CreateNewProfile(ServerProfile profile)
         {
-
+			new ProfileWriter(profile).Save();
         }
 
         public void UpdateProfile()
@@ -35,7 +37,23 @@ namespace Minecraft_Modded_Server_Updater.Tools
 
         }
 
-        public async void CheckProfile()
+		public void LoadProfiles()
+		{
+			List<ServerProfile> tempProfiles = new List<ServerProfile>();
+
+			if (Installer.DoesDirectoryExist(App.RunningDirectory + "//profiles"))
+			{
+				Directory.GetFiles(App.RunningDirectory + "//profiles").ToList().ForEach(file =>
+				{
+					tempProfiles.Add(new ProfileReader(file).Load());
+				});
+            }
+
+			_profiles = tempProfiles;
+
+        }
+
+        public async void CheckProfiles()
         {
 			_profiles.ForEach(async _profile =>
 			{
