@@ -13,7 +13,7 @@ namespace Minecraft_Modded_Server_Updater.Models
         /// <summary>
         /// Typically used for the Minecraft Directory e.g: %appdata%/.minecraft
         /// </summary>
-        public string InstallationPath { get; set; }
+        public string InstallationPath { get; set; } 
 
         public Uri ServerAddress { get; set; }
 

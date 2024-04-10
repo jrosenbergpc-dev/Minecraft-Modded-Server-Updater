@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Minecraft_Modded_Server_Updater"
+        xmlns:UI="clr-namespace:Minecraft_Modded_Server_Updater.UI"
         mc:Ignorable="d"
         Title="CoreWindow" Height="450" Width="800" Background="Black">
     <Grid>
@@ -39,10 +40,10 @@
         <Label Content="Server Browser" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#4C000000" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="20,5,60,5" BorderBrush="#26FFFFFF" BorderThickness="1,1,1,1" FontFamily="Agency FB" FontSize="24" />
         <Image Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="4" Source="/Images/mc_copilot.png" />
         <Rectangle Height="1" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="6" Fill="#7FFFFFFF" Margin="20,0,20,0" />
-        <Label Content="ADD" Grid.Row="3" Grid.Column="1" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#33000000" Margin="5,7.5,5,7.5"/>
-        <Label Content="REMOVE" Grid.Row="3" Grid.Column="2" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#33000000" Margin="5,7.5,5,7.5"/>
-        <Label Content="EDIT" Grid.Row="3" Grid.Column="3" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#33000000" Margin="5,7.5,5,7.5"/>
-        <Label Content="SETTINGS" Grid.Row="3" Grid.Column="4" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#33000000" Margin="5,7.5,5,7.5"/>
+        <UI:NavButton Text="ADD" Grid.Row="3" Grid.Column="1" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Margin="5,7.5,5,7.5"/>
+        <UI:NavButton Text="REMOVE" Grid.Row="3" Grid.Column="2" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0"  Margin="5,7.5,5,7.5"/>
+        <UI:NavButton Text="EDIT" Grid.Row="3" Grid.Column="3" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Margin="5,7.5,5,7.5"/>
+        <UI:NavButton Text="SETTINGS" Grid.Row="3" Grid.Column="4" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Margin="5,7.5,5,7.5"/>
         <Rectangle Grid.Row="4" Grid.ColumnSpan="6" Grid.RowSpan="7" Margin="15,8,15,15" Fill="#7F000000" />
     </Grid>
 </Window>

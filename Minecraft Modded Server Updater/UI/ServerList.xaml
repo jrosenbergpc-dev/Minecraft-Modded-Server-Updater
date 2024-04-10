@@ -5,8 +5,23 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Minecraft_Modded_Server_Updater.UI"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Background="#7F000000">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Content="SERVER NAME" Foreground="White" />
+            <Label Content="PLAYERS" Foreground="White" Grid.Column="1" />
+            <Label Content="VERSION" Foreground="White" Grid.Column="2" />
+            <Label Content="PING" Foreground="White" Grid.Column="3" />
+        </Grid>
     </Grid>
 </UserControl>
