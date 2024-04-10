@@ -5,13 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Minecraft_Modded_Server_Updater"
         mc:Ignorable="d"
-        Title="CoreWindow" Height="450" Width="800">
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black"/>
-            <GradientStop Color="White" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Background>
+        Title="CoreWindow" Height="450" Width="800" Background="Black">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -34,13 +28,21 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Label Content="Server Browser" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#19000000" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="40,0,40,0" BorderBrush="#19FFFFFF" BorderThickness="1,1,1,1" />
-        <Label Content="MC Copilot LOGO GOES HERE" Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Rectangle Grid.RowSpan="11" Grid.ColumnSpan="6" >
+            <Rectangle.Effect>
+                <BlurEffect Radius="6" RenderingBias="Performance" KernelType="Gaussian"/>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Images/mc_cpbg3.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Server Browser" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#4C000000" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="20,5,60,5" BorderBrush="#26FFFFFF" BorderThickness="1,1,1,1" FontFamily="Agency FB" FontSize="24" />
+        <Image Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="4" Source="/Images/mc_copilot.png" />
         <Rectangle Height="1" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="6" Fill="#7FFFFFFF" Margin="20,0,20,0" />
-        <Label Content="ADD" Grid.Row="3" Grid.Column="1" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#19000000" Margin="3,3,3,3"/>
-        <Label Content="REMOVE" Grid.Row="3" Grid.Column="2" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#19000000" Margin="3,3,3,3"/>
-        <Label Content="EDIT" Grid.Row="3" Grid.Column="3" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#19000000" Margin="3,3,3,3"/>
-        <Label Content="SETTINGS" Grid.Row="3" Grid.Column="4" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#19000000" Margin="3,3,3,3"/>
-        <DataGrid Grid.Row="4" Grid.ColumnSpan="6" Grid.RowSpan="7" Margin="15,15,15,15" />
+        <Label Content="ADD" Grid.Row="3" Grid.Column="1" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#33000000" Margin="5,7.5,5,7.5"/>
+        <Label Content="REMOVE" Grid.Row="3" Grid.Column="2" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#33000000" Margin="5,7.5,5,7.5"/>
+        <Label Content="EDIT" Grid.Row="3" Grid.Column="3" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#33000000" Margin="5,7.5,5,7.5"/>
+        <Label Content="SETTINGS" Grid.Row="3" Grid.Column="4" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#33000000" Margin="5,7.5,5,7.5"/>
+        <Rectangle Grid.Row="4" Grid.ColumnSpan="6" Grid.RowSpan="7" Margin="15,8,15,15" Fill="#7F000000" />
     </Grid>
 </Window>

@@ -21,6 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\mc_copilot.png" />
+    <None Remove="Images\mc_copilot2.png" />
+    <None Remove="Images\mc_cpbg1.jpg" />
+    <None Remove="Images\mc_cpbg2.png" />
+    <None Remove="Images\mc_cpbg3.png" />
     <None Remove="Images\minecraft_loading.gif" />
     <None Remove="Images\minecraft_newmod_icon.png" />
     <None Remove="Images\minecraft_okay.png" />
@@ -41,6 +46,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\mc_copilot.png" />
+    <Resource Include="Images\mc_copilot2.png" />
+    <Resource Include="Images\mc_cpbg1.jpg" />
+    <Resource Include="Images\mc_cpbg2.png" />
+    <Resource Include="Images\mc_cpbg3.png" />
     <Resource Include="Images\minecraft_loading.gif" />
     <Resource Include="Images\minecraft_newmod_icon.png" />
     <Resource Include="Images\minecraft_okay.png" />
