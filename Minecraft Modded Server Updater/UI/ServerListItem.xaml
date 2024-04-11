@@ -5,8 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Minecraft_Modded_Server_Updater.UI"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="50" d:DesignWidth="800" MinHeight="50" MaxHeight="50">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Content="SERVER NAME" Foreground="White" Padding="3,1,0,0" Margin="1,1,1,1" FontSize="16" FontWeight="Bold" Background="#26000000" />
+        <Label Content="DESCRIPTION TEXT GOES HERE TO GIVE USER SOME BASIC INFO ABOUT THE SERVER" Foreground="#7FA5A5A5" VerticalContentAlignment="Center" Padding="12,15,0,0" FontStyle="Italic" FontSize="10" Background="{x:Null}" />
+        <Label Content="0/0" Foreground="White" Grid.Column="1" Padding="0,0,0,0" Margin="1,1,1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#26000000" />
+        <Label Content="0.0.0" Foreground="White" Grid.Column="2" Padding="0,0,0,0" Margin="1,1,1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#26000000" />
+        <Rectangle Grid.Column="3" Fill="#26000000" Margin="1,1,1,1" />
+        <Image Grid.Column="3" Margin="1,1,1,1" />
     </Grid>
 </UserControl>

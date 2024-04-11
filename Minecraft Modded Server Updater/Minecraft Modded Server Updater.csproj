@@ -30,6 +30,13 @@
     <None Remove="Images\minecraft_newmod_icon.png" />
     <None Remove="Images\minecraft_okay.png" />
     <None Remove="Images\minecraft_phone_bg.jpg" />
+    <None Remove="Signals\signal_0.png" />
+    <None Remove="Signals\signal_1.png" />
+    <None Remove="Signals\signal_2.png" />
+    <None Remove="Signals\signal_3.png" />
+    <None Remove="Signals\signal_4.png" />
+    <None Remove="Signals\signal_full.png" />
+    <None Remove="Signals\signal_offline.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,6 +62,13 @@
     <Resource Include="Images\minecraft_newmod_icon.png" />
     <Resource Include="Images\minecraft_okay.png" />
     <Resource Include="Images\minecraft_phone_bg.jpg" />
+    <Resource Include="Signals\signal_0.png" />
+    <Resource Include="Signals\signal_1.png" />
+    <Resource Include="Signals\signal_2.png" />
+    <Resource Include="Signals\signal_3.png" />
+    <Resource Include="Signals\signal_4.png" />
+    <Resource Include="Signals\signal_full.png" />
+    <Resource Include="Signals\signal_offline.png" />
   </ItemGroup>
 
 </Project>

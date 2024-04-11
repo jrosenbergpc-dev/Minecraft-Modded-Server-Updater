@@ -44,6 +44,6 @@
         <UI:NavButton Text="REMOVE" Grid.Row="3" Grid.Column="2" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0"  Margin="5,7.5,5,7.5"/>
         <UI:NavButton Text="EDIT" Grid.Row="3" Grid.Column="3" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Margin="5,7.5,5,7.5"/>
         <UI:NavButton Text="SETTINGS" Grid.Row="3" Grid.Column="4" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Margin="5,7.5,5,7.5"/>
-        <Rectangle Grid.Row="4" Grid.ColumnSpan="6" Grid.RowSpan="7" Margin="15,8,15,15" Fill="#7F000000" />
+        <UI:ServerList Grid.Row="4" Grid.ColumnSpan="6" Grid.RowSpan="7" Margin="15,8,15,15" />
     </Grid>
 </Window>
