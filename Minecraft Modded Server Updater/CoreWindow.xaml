@@ -37,7 +37,7 @@
                 <ImageBrush ImageSource="/Images/mc_cpbg3.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Label Content="Server Browser" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Background="#4C000000" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="20,5,60,5" BorderBrush="#26FFFFFF" BorderThickness="1,1,1,1" FontFamily="Agency FB" FontSize="24" />
+        <Label Content="Server Browser" Foreground="White" Padding="0,0,0,0" Background="#4C000000" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="18,5,60,5" BorderBrush="#26FFFFFF" BorderThickness="1,1,1,1" FontFamily="Agency FB" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
         <Image Grid.Column="2" Grid.RowSpan="3" Grid.ColumnSpan="4" Source="/Images/mc_copilot.png" />
         <Rectangle Height="1" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="6" Fill="#7FFFFFFF" Margin="20,0,20,0" />
         <UI:NavButton Text="ADD" Grid.Row="3" Grid.Column="1" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" Margin="5,7.5,5,7.5"/>
