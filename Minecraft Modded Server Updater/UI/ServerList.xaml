@@ -11,9 +11,10 @@
             <RowDefinition Height="30"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Grid x:Name="ServerListHeader" Background="#7F000000">
+        <Grid x:Name="ServerListHeader" Background="#BF000000">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="4*"/>
+                <ColumnDefinition />
                 <ColumnDefinition />
                 <ColumnDefinition />
                 <ColumnDefinition />
@@ -22,6 +23,8 @@
             <Label Content="PLAYERS" Foreground="White" Grid.Column="1" />
             <Label Content="VERSION" Foreground="White" Grid.Column="2" />
             <Label Content="PING" Foreground="White" Grid.Column="3" />
+            <Label Content="ACTION" Foreground="White" Grid.Column="4" />
+            
         </Grid>
         <ScrollViewer Grid.Row="1">
             <ScrollViewer.Resources>
@@ -73,17 +76,7 @@
                 <Style BasedOn="{StaticResource CustomVerticalScrollBar}" TargetType="{x:Type ScrollBar}" />
             </ScrollViewer.Resources>
             <StackPanel x:Name="ServerListViewBox">
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
-                <local:ServerListItem />
+                <Label Content="NO SERVERS YET" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Opacity="0.35" />
             </StackPanel>
         </ScrollViewer>
         

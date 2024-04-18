@@ -12,12 +12,22 @@
             <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Label Content="SERVER NAME" Foreground="White" Padding="3,1,0,0" Margin="1,1,1,1" FontSize="16" FontWeight="Bold" Background="#26000000" />
         <Label Content="DESCRIPTION TEXT GOES HERE TO GIVE USER SOME BASIC INFO ABOUT THE SERVER" Foreground="#7FA5A5A5" VerticalContentAlignment="Center" Padding="12,15,0,0" FontStyle="Italic" FontSize="10" Background="{x:Null}" />
         <Label Content="0/0" Foreground="White" Grid.Column="1" Padding="0,0,0,0" Margin="1,1,1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#26000000" />
         <Label Content="0.0.0" Foreground="White" Grid.Column="2" Padding="0,0,0,0" Margin="1,1,1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="#26000000" />
         <Rectangle Grid.Column="3" Fill="#26000000" Margin="1,1,1,1" />
-        <Image Grid.Column="3" Margin="1,1,1,1" />
+        <Image Grid.Column="3" Margin="1,1,1,1" Source="/Signals/signal_offline.png" />
+        <Rectangle Grid.Column="4" Fill="#26000000" Margin="1,1,1,1" />
+        <Grid Grid.Column="4" Margin="1,1,1,1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image Source="/Images/view_list.png" Margin="8,5,9,5" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" />
+            <Image Grid.Column="1" Source="/Images/start_icon.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8,5,9,5" Cursor="Hand"/>
+        </Grid>
     </Grid>
 </UserControl>
