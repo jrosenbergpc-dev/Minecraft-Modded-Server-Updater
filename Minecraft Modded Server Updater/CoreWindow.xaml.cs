@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Minecraft_Modded_Server_Updater.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,16 @@ namespace Minecraft_Modded_Server_Updater
 	/// </summary>
 	public partial class CoreWindow : Window
 	{
+		private Main _MainWindow = new Main();
+
 		public CoreWindow()
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+			CoreFrame.Navigate(_MainWindow);
+        }
+    }
 }

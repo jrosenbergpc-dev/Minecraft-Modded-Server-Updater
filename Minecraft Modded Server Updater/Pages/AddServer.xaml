@@ -9,6 +9,49 @@
       Title="AddServer">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Rectangle Grid.RowSpan="11" Grid.ColumnSpan="6" >
+            <Rectangle.Effect>
+                <BlurEffect Radius="6" RenderingBias="Performance" KernelType="Gaussian"/>
+            </Rectangle.Effect>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Images/mc_cpbg3.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="4" Source="/Images/mc_copilot.png" />
+        <Rectangle Height="1" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="6" Fill="#3FFFFFFF" Margin="20,0,20,0" />
+
+        <Label Content="Lets get started with adding a new server to your MC Copilot!" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" HorizontalContentAlignment="Center" Foreground="#FFCACACA" Background="#99000000" Grid.RowSpan="6" Padding="5,10,5,5" />
+        <Label Content="Server Name:" Grid.Row="5" Foreground="White" Grid.Column="1" />
+        <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" />
+        <Label Content="Server Description (optional): " Grid.Row="6" Foreground="White" Grid.Column="1" Grid.ColumnSpan="2" />
+        <TextBlock />
+        <Label Content="Minecraft Version: " />
+        <ComboBox />
+        <Label Content="Server Address: " />
+        <TextBox />
+        <CheckBox Content="Mod Repository Address Same as Server Address" />
+        <Label Content="Mod Repository Address: " />
+        <TextBox />
     </Grid>
 </Page>

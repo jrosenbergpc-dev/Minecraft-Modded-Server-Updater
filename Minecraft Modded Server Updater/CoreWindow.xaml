@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Minecraft_Modded_Server_Updater"
         mc:Ignorable="d"
-        Title="CoreWindow" Height="450" Width="800" Background="Black">
+        Title="CoreWindow" Height="450" Width="800" Background="Black" Loaded="Window_Loaded">
     <Grid>
         <Frame x:Name="CoreFrame" />
     </Grid>

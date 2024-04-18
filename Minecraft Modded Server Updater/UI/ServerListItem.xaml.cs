@@ -24,5 +24,5 @@ namespace Minecraft_Modded_Server_Updater.UI
 		{
 			InitializeComponent();
 		}
-	}
+    }
 }
