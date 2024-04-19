@@ -41,17 +41,17 @@
         <Image Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="4" Source="/Images/mc_copilot.png" />
         <Rectangle Height="1" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="6" Fill="#3FFFFFFF" Margin="20,0,20,0" />
 
-        <Label Content="Lets get started with adding a new server to your MC Copilot!" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" HorizontalContentAlignment="Center" Foreground="#FFCACACA" Background="#99000000" Grid.RowSpan="6" Padding="5,10,5,5" />
-        <Label Content="Server Name:" Grid.Row="5" Foreground="White" Grid.Column="1" />
-        <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" />
-        <Label Content="Server Description (optional): " Grid.Row="6" Foreground="White" Grid.Column="1" Grid.ColumnSpan="2" />
-        <TextBlock />
-        <Label Content="Minecraft Version: " />
-        <ComboBox />
-        <Label Content="Server Address: " />
-        <TextBox />
-        <CheckBox Content="Mod Repository Address Same as Server Address" />
-        <Label Content="Mod Repository Address: " />
-        <TextBox />
+        <Label Content="Lets get started with adding a new server to your MC Copilot!" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" HorizontalContentAlignment="Center" Foreground="#FFCACACA" Background="#99000000" Grid.RowSpan="8" Padding="5,10,5,5" />
+        <Label Content="Server Name:" Grid.Row="4" Foreground="White" Grid.Column="1" VerticalContentAlignment="Center" />
+        <TextBox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Margin="0,5,10,5" />
+        <Label Content="Server Description (optional): " Grid.Row="5" Foreground="White" Grid.Column="1" Grid.ColumnSpan="2" VerticalContentAlignment="Center" />
+        <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Margin="40,5,10,5" />
+        <Label Content="Minecraft Version: " Grid.Row="6" Grid.Column="1" Foreground="White" VerticalContentAlignment="Center" />
+        <ComboBox Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,5,10,5" />
+        <Label Content="Server Address: " Grid.Row="7" Grid.Column="1" Foreground="White" VerticalContentAlignment="Center" />
+        <TextBox Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3" Margin="0,5,10,5" />
+        <CheckBox Content="Mod Repository Address Same as Server Address" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3" Foreground="White" />
+        <Label Content="Mod Repository Address: " Grid.Row="9" Grid.Column="1" Foreground="White" Grid.ColumnSpan="2" VerticalContentAlignment="Center" />
+        <TextBox Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="3" Margin="20,5,10,5" />
     </Grid>
 </Page>
