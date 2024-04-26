@@ -22,12 +22,27 @@ namespace Minecraft_Modded_Server_Updater
 	{
 		private Main _MainWindow = new Main();
 
+		private AddServer _AddServerWindow = new AddServer();
+
 		public CoreWindow()
 		{
 			InitializeComponent();
+
+			_MainWindow.AddButtonClicked += _MainWindow_AddButtonClicked;
+			_MainWindow.RemoveButtonClicked += _MainWindow_RemoveButtonClicked;
 		}
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+		private void _MainWindow_RemoveButtonClicked(object? sender, EventArgs e)
+		{
+
+		}
+
+		private void _MainWindow_AddButtonClicked(object? sender, EventArgs e)
+		{
+			CoreFrame.Navigate(_AddServerWindow);
+		}
+
+		private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 			CoreFrame.Navigate(_MainWindow);
         }
